@@ -83,4 +83,4 @@ To change the accent color, search for `--forest:` in `style.css` and change the
 
 ---
 
-© 2025 Fazli Salim
+© 2026 Fazli Salim
