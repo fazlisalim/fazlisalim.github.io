@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fazli Salim — Doctoral Researcher</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Fazli Salim</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html" class="nav-link active">Home</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="research.html" class="nav-link">Research</a></li>
+      <li><a href="writing.html" class="nav-link">Writing</a></li>
+      <li><a href="contact.html" class="nav-link nav-link-cta">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- CV modal -->
+<div class="cv-modal-overlay" id="cv-modal-overlay" onclick="closeCvModal()">
+  <div class="cv-modal" onclick="event.stopPropagation()">
+    <p class="cv-modal-text">For the latest version of my CV, please reach out directly.</p>
+    <a href="mailto:fazli.salim@bc.edu" class="cv-modal-email">fazli.salim@bc.edu</a>
+    <button class="cv-modal-close" onclick="closeCvModal()">Close</button>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="hero-with-photo">
+    <div class="hero-photo-col">
+      <img src="photo.jpg" alt="Fazli Salim" class="hero-portrait">
+    </div>
+    <div class="hero-text-col">
+      <p class="hero-eyebrow">Doctoral Researcher · Boston College</p>
+      <h1 class="hero-name">Fazli Salim</h1>
+      <p class="hero-tagline">Studying the psychology of how people become agents of systemic change — from climate action to democratic resilience.</p>
+      <div class="hero-tags">
+        <span class="tag">Collective Action</span>
+        <span class="tag">Environmental Psychology</span>
+        <span class="tag">Social Change</span>
+        <span class="tag">Democratic Resilience</span>
+      </div>
+      <div class="hero-buttons">
+        <a href="research.html" class="btn-primary">View Research</a>
+        <button class="btn-secondary" onclick="openCvModal()">Download CV</button>
+      </div>
+      <div class="affiliations">
+        <a href="https://www.bc.edu/bc-web/schools/morrissey/departments/psychology-neuroscience/labs/sparkman-lab.html" target="_blank" class="affiliation">Social Influence &amp; Social Change Lab</a>
+        <span class="aff-sep">·</span>
+        <a href="https://www.bc.edu/content/bc-web/centers/clough.html" target="_blank" class="affiliation">Clough Center for Constitutional Democracy</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section research-snap">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Research</span>
+      <h2 class="section-title">Current Questions</h2>
+    </div>
+    <div class="research-grid">
+      <a href="research.html" class="research-card">
+        <span class="r-num">01</span>
+        <h3 class="r-title">Agency &amp; Systemic Change</h3>
+        <p class="r-body">How do individuals come to see themselves as integral to both personal and systemic solutions to environmental and social challenges?</p>
+        <span class="r-arrow">→</span>
+      </a>
+      <a href="research.html" class="research-card">
+        <span class="r-num">02</span>
+        <h3 class="r-title">Perceiving Collective Shifts</h3>
+        <p class="r-body">Why do people fail to recognize systemic changes, and what shapes their sense of efficacy in collective action?</p>
+        <span class="r-arrow">→</span>
+      </a>
+      <a href="research.html" class="research-card">
+        <span class="r-num">03</span>
+        <h3 class="r-title">Psychology of Sustainable Futures</h3>
+        <p class="r-body">What psychological frameworks are necessary for societies to facilitate equal and sustainable futures?</p>
+        <span class="r-arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="highlights-section section-alt">
+  <div class="container">
+    <span class="section-label">Recent Highlights</span>
+    <div class="highlights-two-col">
+
+      <div class="highlight-block">
+        <p class="highlight-sub-label">SPSP Award Ceremony · Chicago 2026</p>
+        <img src="photo-award.jpg" alt="Jenessa Shapiro Graduate Research Award ceremony, SPSP Annual Convention Chicago 2026" class="highlight-award-photo">
+        <p class="highlight-caption">Jenessa Shapiro Graduate Research Award · SPSP Annual Convention</p>
+      </div>
+
+      <div class="highlight-block">
+        <p class="highlight-sub-label">UNFCCC COP 30 · Belém, Brazil</p>
+        <div class="cop-quote-wrap">
+          <p class="cop-quote">COP30 is where global decisions meet human behavior. I'm excited to see my research come to life: how behavioral theories are tested against the realities of politics, economics, and culture in real time. I'm equally inspired by the chance to meet grassroots organizations from across the world who are developing community-centered solutions putting people at the heart of climate action, something that often gets ignored in international climate policies. For someone working at the intersection of behavior and environmental issues, it feels both deeply relevant and inspiring.</p>
+          <a href="https://www.bc.edu/bc-web/centers/schiller-institute/programs-initiatives/bc-cop/cop30.html" target="_blank" class="cop-link">Boston College COP30 University Delegate →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-left">
+      <p class="footer-name">Fazli Salim</p>
+      <p class="footer-role">Doctoral Researcher · Boston College</p>
+    </div>
+    <div class="footer-links">
+      <a href="mailto:fazli.salim@bc.edu" class="footer-link">Email</a>
+      <a href="https://scholar.google.com" target="_blank" class="footer-link">Google Scholar</a>
+      <a href="https://linkedin.com/in/fazlisalim" target="_blank" class="footer-link">LinkedIn</a>
+    </div>
+  </div>
+  <div class="container"><p class="footer-copy">© 2026 Fazli Salim</p></div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
