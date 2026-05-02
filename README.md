@@ -13,8 +13,8 @@ fazlisalim/
 ├── contact.html    ← Contact page
 ├── style.css       ← All styling (colors, fonts, layout)
 ├── script.js       ← Navigation toggle, scroll effects
-├── photo.jpg       ← Your profile photo (replace this file)
-├── cv.pdf          ← Your CV PDF (replace this file)
+├── photo.jpg       ← Profile photo 
+├── cv.pdf          ← CV PDF
 └── README.md       ← This file
 ```
 
