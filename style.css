@@ -447,7 +447,8 @@ button.btn-secondary { cursor: pointer; font-family: var(--font-body); }
 
 /* Industry section — distinct aesthetic */
 .industry-section {
-  background: var(--ink);
+  background:#e8f0ec;
+   border-top: 2px solid var(--forest);
   position: relative;
 }
 .industry-section .section-label { color: var(--forest-mid); }
