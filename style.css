@@ -5,9 +5,9 @@
   --ink: #1a1814;
   --ink-secondary: #5a5650;
   --ink-tertiary: #9a958f;
-  --parchment: #ffffff;
-  --parchment-mid: #f5f5f5;
-  --parchment-dark: #ebebeb;
+  --parchment: #faf8f4;
+  --parchment-mid: #f2ede5;
+  --parchment-dark: #e8e0d4;
   --forest: #2d6a4f;
   --forest-deep: #1a3028;
   --forest-light: #d8f3dc;
@@ -27,7 +27,7 @@ img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
 
 /* NAV */
-.nav { position: sticky; top: 0; z-index: 100; background: rgba(250,248,244,0.95); backdrop-filter: blur(12px); border-bottom: 0.5px solid var(--border); height: var(--nav-h); }
+.nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.97); backdrop-filter: blur(12px); border-bottom: 0.5px solid var(--border); height: var(--nav-h); }
 .nav-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 2rem; height: 100%; display: flex; align-items: center; gap: 2rem; }
 .nav-logo { font-family: var(--font-display); font-size: 1.25rem; font-weight: 500; color: var(--ink); flex-shrink: 0; }
 .nav-links { display: flex; list-style: none; gap: 0.125rem; margin-left: auto; align-items: center; }
@@ -101,7 +101,7 @@ a { color: inherit; text-decoration: none; }
 .research-card:hover .r-arrow { opacity: 1; transform: translateX(3px); }
 
 /* PAGE HERO */
-.page-hero { padding: clamp(3rem, 5vw, 5rem) 0 clamp(2rem, 4vw, 3rem); border-bottom: 0.5px solid var(--border); }
+.page-hero { padding: clamp(1.5rem, 3vw, 2.5rem) 0 clamp(1.25rem, 2.5vw, 2rem); border-bottom: 0.5px solid var(--border); }
 .page-title { font-family: var(--font-display); font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 400; color: var(--ink); line-height: 1.1; margin-top: 0.5rem; margin-bottom: 1rem; }
 .page-subtitle { font-size: 1rem; color: var(--ink-secondary); max-width: 56ch; line-height: 1.7; font-weight: 300; }
 
@@ -202,6 +202,7 @@ a { color: inherit; text-decoration: none; }
 
 /* WRITING PAGE */
 .writing-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+.writing-grid.single-card { grid-template-columns: minmax(280px, 480px); }
 .writing-card { display: flex; flex-direction: column; padding: 1.5rem; background: var(--parchment); border: 0.5px solid var(--border); border-radius: 8px; transition: border-color 0.2s, transform 0.2s; position: relative; }
 .writing-card:hover { border-color: var(--forest-mid); transform: translateY(-2px); }
 .writing-pub { font-size: 0.6875rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; color: var(--forest); margin-bottom: 0.6rem; }
@@ -447,17 +448,27 @@ button.btn-secondary { cursor: pointer; font-family: var(--font-body); }
 
 /* Industry section — distinct aesthetic */
 .industry-section {
-  background: #e8f0ec;
-  border-top: 2px solid var(--forest);
+  background: var(--ink);
+  position: relative;
 }
-.industry-section .section-label { color: var(--forest); }
-.industry-section .section-title { color: var(--ink); }
-.industry-section .industry-intro { color: var(--ink-secondary); }
-.industry-section .collab-name { color: var(--ink); }
-.industry-section .collab-desc { color: var(--ink-secondary); }
+.industry-section .section-label { color: var(--forest-mid); }
+.industry-section .section-title { color: var(--parchment); }
+.industry-section .industry-intro { color: rgba(250,248,244,0.55); }
 .industry-section .collab-card {
-  background: rgba(255,255,255,0.6);
-  border: 0.5px solid rgba(45,106,79,0.15);
+  background: rgba(250,248,244,0.05);
+  border: 0.5px solid rgba(250,248,244,0.12);
+}
+.industry-section .collab-card-link:hover {
+  border-color: var(--forest-mid);
+  transform: translateY(-2px);
+}
+.industry-section .collab-name { color: var(--parchment); }
+.industry-section .collab-desc { color: rgba(250,248,244,0.6); }
+.industry-section .collab-logo { filter: brightness(0) invert(1); opacity: 0.7; }
+.industry-section .collab-logo-dark { filter: brightness(0) invert(1); opacity: 0.7; background: none; padding: 0; }
+.industry-section .collab-logo-abbr {
+  background: rgba(250,248,244,0.1);
+  color: var(--forest-mid);
 }
 
 /* Homepage — tighter award photo and COP block */
