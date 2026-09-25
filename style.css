@@ -1,101 +1,89 @@
+/* Layout, type and colors modeled on the Minimal theme (orderedlist) used by jenpan.com */
+
 body {
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: 15px;
-  line-height: 1.7;
-  color: #333;
-  background: #fff;
+  background-color: #fff;
   margin: 0;
-  padding: 0;
+  padding: 50px;
+  font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #595959;
+  font-weight: 400;
 }
 
-#wrapper {
-  width: 640px;
-  margin: 40px auto 80px;
-  padding: 0 20px;
+h1, h2, h3, h4 { color: #222; margin: 0 0 20px; line-height: 1.1; font-weight: 500; }
+h1 { font-size: 28px; }
+h2 { font-size: 22px; color: #393939; margin-top: 36px; }
+h3 { font-size: 17px; color: #494949; margin-top: 28px; }
+section > h2:first-child { margin-top: 0; }
+
+p, ul, ol { margin: 0 0 20px; }
+em { color: #494949; }
+
+a { color: #39c; text-decoration: none; }
+a:hover, a:focus { color: #069; }
+a:focus-visible { outline: 2px solid #39c; outline-offset: 2px; }
+
+.wrapper { width: 860px; margin: 0 auto; }
+
+/* ---- Fixed left column ---- */
+header {
+  width: 270px;
+  float: left;
+  position: fixed;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+header h1 a { color: #222; }
+header h1 a:hover { color: #069; }
+header p.affiliation { margin-bottom: 24px; }
+
+header ul.nav { list-style: none; padding: 0; margin: 0; }
+header ul.nav li { margin: 0 0 10px; }
+header ul.nav a.current { color: #222; font-weight: 500; }
+
+footer {
+  width: 270px;
+  float: left;
+  position: fixed;
+  bottom: 50px;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+footer p { margin: 0; }
+
+/* ---- Right column ---- */
+section {
+  width: 500px;
+  float: right;
+  padding-bottom: 50px;
 }
 
-h1 {
-  font-size: 20px;
-  font-weight: normal;
-  margin: 0 0 6px 0;
+/* Fellowships & awards / teaching: year column + description */
+table.cv { width: 100%; border-collapse: collapse; margin: 0 0 20px; }
+table.cv td { padding: 0 0 8px; vertical-align: top; }
+table.cv td.year { width: 72px; white-space: nowrap; color: #222; }
+
+/* Short windows: stop the fixed footer from sliding over the nav */
+@media screen and (max-height: 560px) {
+  header, footer { position: static; }
+  footer { float: none; clear: both; }
 }
 
-h1 a {
-  color: #333;
-  text-decoration: none;
-}
-
-h1 a:hover {
-  text-decoration: underline;
-}
-
-p.affiliation {
-  font-size: 13px;
-  line-height: 1.6;
-  color: #555;
-  margin: 0 0 12px 0;
-}
-
-ul.nav {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 28px 0;
-  display: flex;
-  gap: 16px;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 10px;
-}
-
-ul.nav li a {
-  font-size: 13px;
-  color: #4a7fc1;
-  text-decoration: none;
-}
-
-ul.nav li a:hover {
-  text-decoration: underline;
-}
-
-h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 28px 0 10px 0;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 4px;
-}
-
-h3 {
-  font-size: 14px;
-  font-weight: bold;
-  margin: 18px 0 8px 0;
-}
-
-p {
-  margin: 0 0 12px 0;
-  font-size: 14px;
-}
-
-a {
-  color: #4a7fc1;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-p.links {
-  margin-top: 40px;
-  padding-top: 12px;
-  border-top: 1px solid #ddd;
-  font-size: 13px;
-  color: #555;
-}
-
-@media (max-width: 680px) {
-  #wrapper {
-    width: auto;
-    margin: 24px auto 60px;
-    padding: 0 16px;
+/* Tablets and phones: stack everything in one column */
+@media print, screen and (max-width: 960px) {
+  .wrapper { width: auto; margin: 0; }
+  header, section, footer { float: none; position: static; width: auto; }
+  header ul.nav { margin-bottom: 20px; }
+  header ul.nav li { display: inline-block; margin: 0 18px 0 0; }
+  section {
+    border: 1px solid #e5e5e5;
+    border-width: 1px 0;
+    padding: 20px 0;
+    margin: 0 0 20px;
   }
+}
+
+@media print, screen and (max-width: 480px) {
+  body { padding: 15px; word-wrap: break-word; }
+}
+
+@media print {
+  body { padding: 0.4in; font-size: 12pt; color: #444; }
 }
