@@ -4,12 +4,12 @@ body {
   background-color: #fff;
   margin: 0;
   padding: 50px;
-  font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #595959;
   font-weight: 400;
 }
 
-h1, h2, h3, h4 { color: #222; margin: 0 0 20px; line-height: 1.1; font-weight: 500; }
+h1, h2, h3, h4 { color: #222; margin: 0 0 20px; line-height: 1.1; font-weight: bold; }
 h1 { font-size: 28px; }
 h2 { font-size: 22px; color: #393939; margin-top: 36px; }
 h3 { font-size: 17px; color: #494949; margin-top: 28px; }
@@ -37,7 +37,7 @@ header p.affiliation { margin-bottom: 24px; }
 
 header ul.nav { list-style: none; padding: 0; margin: 0; }
 header ul.nav li { margin: 0 0 10px; }
-header ul.nav a.current { color: #222; font-weight: 500; }
+header ul.nav a.current { color: #222; font-weight: bold; }
 
 footer {
   width: 270px;
@@ -47,6 +47,7 @@ footer {
   -webkit-font-smoothing: subpixel-antialiased;
 }
 footer p { margin: 0; }
+footer p.credit { margin-top: 12px; font-size: 11px; color: #999; }
 
 /* ---- Right column ---- */
 section {
